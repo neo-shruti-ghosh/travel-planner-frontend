@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Main Backgrounds */
+  --background: #0f1722;
+  --foreground: #f5f7fa;
+
+  /* Brand Colors */
+  --primary: #0d6e9f;
+  --primary-hover: #0b5d87;
+
+  /* Accent Colors */
+  --accent-blue: #1b84b3;
+  --accent-orange: #f0b38a;
+  --accent-beige: #d9c7b8;
+
+  /* Surface Colors */
+  --surface: #ffffff;
+  --surface-muted: #f3f4f6;
+  --surface-dark: #1a2433;
+
+  /* Text Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #6b7280;
+  --text-light: #ffffff;
+  --text-muted: #cbd5e1;
+
+  /* Borders */
+  --border-light: #e5e7eb;
+  --border-dark: rgba(255, 255, 255, 0.1);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.18);
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-heavy: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-beige: var(--accent-beige);
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-dark: var(--surface-dark);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-light: var(--text-light);
+  --color-text-muted: var(--text-muted);
+
+  --color-border-light: var(--border-light);
+  --color-border-dark: var(--border-dark);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
